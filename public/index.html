@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker Analytics</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Expense Tracker Dashboard</h1>
+
+<div class="dashboard">
+
+<div class="card">
+<h3>Total Expense</h3>
+<p id="totalExpense">₹0</p>
+</div>
+
+<div class="card">
+<h3>Transactions</h3>
+<p id="totalTransactions">0</p>
+</div>
+
+<div class="card">
+<h3>Highest Expense</h3>
+<p id="highestExpense">₹0</p>
+</div>
+
+<div class="card">
+<h3>Top Category</h3>
+<p id="topCategory">-</p>
+</div>
+
+</div>
+
+<form id="expenseForm">
+
+<input
+type="text"
+id="title"
+placeholder="Expense Title"
+required>
+
+<input
+type="number"
+id="amount"
+placeholder="Amount"
+required>
+
+<input
+type="text"
+id="category"
+placeholder="Category"
+required>
+
+<input
+type="date"
+id="date"
+required>
+
+<button type="submit">
+Add Expense
+</button>
+
+</form>
+
+<div class="filters">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Expense">
+
+<select id="filterCategory">
+
+<option value="">
+All Categories
+</option>
+
+<option>
+Food
+</option>
+
+<option>
+Travel
+</option>
+
+<option>
+Shopping
+</option>
+
+<option>
+Bills
+</option>
+
+</select>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Title</th>
+<th>Amount</th>
+<th>Category</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="expenseTable">
+
+</tbody>
+
+</table>
+
+<h2>Expense Analytics</h2>
+
+<canvas id="categoryChart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
